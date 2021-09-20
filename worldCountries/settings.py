@@ -37,13 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
-    'countries.app.CountriesConfig',
-    'corsheaders'
+    'rest_framework',
+    'countries.apps.CountriesConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.CorsMiddlewear',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'worldCountries.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'countriesdb',
-        'USER':'postgres',
-        'PASSWORD':'admin',
-        'HOST':'127.0.0.1',
-        'PORT':'5432',
+        'NAME': 'countriesdb',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
